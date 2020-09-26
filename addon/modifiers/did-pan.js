@@ -14,9 +14,9 @@ export default class DidPanModifier extends Modifier {
   addEventListeners() {
     // if an axis is set, limit scroll to a single axis
     if(this.axis === 'horizontal'){
-      this.element.style.touchAction = 'pan-y';
+      this.element.style.touchAction = 'pan-x;
     } else if(this.axis === 'vertical') {
-      this.element.style.touchAction = 'pan-x';
+      this.element.style.touchAction = 'pan-y';
     }
 
     this.element.addEventListener('touchstart', this.didTouchStart, { capture: this.useCapture, passive: true });
